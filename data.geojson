@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India Gate",
+        "city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.2295, 28.6129]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Red Fort",
+        "city": "Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.2410, 28.6562]
+      }
+    }
+  ]
+}
