@@ -42,6 +42,19 @@
     L.marker([28.6139, 77.2090]).addTo(map)
       .bindPopup("<b>Hello!</b><br>This is New Delhi.")
       .openPopup();
+    // Load GeoJSON data from GitHub
+    fetch('data.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data, {
+          onEachFeature: function (feature, layer) {
+            layer.bindPopup(
+              "<b>" + feature.properties.name + "</b><br>" +
+              feature.properties.city
+            );
+          }
+        }).addTo(map);
+      });
   </script>
 </body>
 </html>
